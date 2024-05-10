@@ -11,7 +11,7 @@
     <script defer type="text/javascript" src="konva.min.js"></script>
     <script defer type="text/javascript" src="color-thief.umd.js"></script>
     <script defer type="text/javascript" src="nearestColor.js"></script>
-    <script defer type="text/javascript" src="scripts.js"></script>
+    <script defer type="text/javascript" src="myscript.js"></script>
   </head>
   <body>
     <div id="flex">
@@ -22,19 +22,36 @@
           <p>Choose your pattern size and the number of colors you'd like to use, then upload the image you want to use as a pattern. You can resize, move, and rotate the image. When it's just right, click &ldquo;Render&rdquo; and generate your pattern.</p>
           <p>Once your pattern is rendered you can fix up any mistakes by clicking on the grid. The square you click on will cycle through the palette colors. When you are satisfied, click &ldquo;Download&rdquo; to save your work.</p>
         </div>
-        <label for="rows">
-          <span>Number of rows:</span>
-          <input type="number" id="rows" name="rows" min="1" max="1000" value="50" />
-        </label>
-        <label for="columns">
-          <span>Number of columns:</span>
-          <input type="number" id="columns" name="columns" min="1" max="1000" value="50" />
-        </label>
+        <div class="spinner-container">
+          <label for="rows">
+           <span>Number of rows:</span>
+            <input type="number" id="rows" name="rows" min="1" max="1000" value="50" >
+            <div class="spinner">
+              <button type="button" class="up button">&rsaquo;</button>
+              <button type="button" class="down button">&lsaquo;</button>
+             </div>
+          </label>
+        </div>
+        <div class="spinner-container">
+          <label for="columns">
+            <span>Number of columns:</span>
+            <input type="number" id="columns" name="rows" min="1" max="1000" value="50" >
+            <div class="spinner">
+              <button type="button" class="up button">&rsaquo;</button>
+              <button type="button" class="down button">&lsaquo;</button>
+            </div>
+          </label>
+        </div><div class="spinner-container">
         <label for="colors">
           <span>Number of colors to extract:</span>
-          <input type="number" id="colors" name="colors" min="1" max="100" value="3" />
+          <input type="number" id="colors" name="rows" min="1" max="1000" value="6" >
+          <div class="spinner">
+            <button type="button" class="up button">&rsaquo;</button>
+            <button type="button" class="down button">&lsaquo;</button>
+          </div>
         </label>
-         <button type="submit">Next</button>
+      </div>
+        <button type="submit">Next</button>
       </form>
 
       <div id="imageForm">
