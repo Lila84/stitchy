@@ -65,6 +65,7 @@ label span {
 
 input {
   background-color: transparent;
+  font-size:16px;
   text-transform: uppercase;
   border-radius: 0;
   border: 2px solid #fff;
