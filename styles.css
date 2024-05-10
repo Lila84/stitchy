@@ -18,11 +18,11 @@ p {
 
 label {
   display: block; 
-  margin-bottom: 20px; 
 }
 
 label span {
   width: 250px;
+  height: 40px;
   display: inline-block;
 }
 
@@ -65,9 +65,10 @@ label span {
 
 input {
   background-color: transparent;
+  font-size:16px;
   text-transform: uppercase;
   border-radius: 0;
-  border: 2px solid #fff;
+  border: none;
   color: #fff;
   height: 45px;
   margin-left: 20px;
@@ -146,4 +147,70 @@ input[type=file] {
   height: auto;
   display: inline-block;
   margin-left: 0;
+}
+
+.spinner-container {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.spinner-container:hover {
+  border: 1px solid darkgray;
+  border-radius: .5rem;
+}
+
+.spinner-container:hover input {
+  border: none;
+}
+
+.spinner {
+  right: 1px;
+  top: 2px;
+  bottom: 2px;
+  width: 1.3rem;
+  position: absolute;
+  background: white;
+  border-radius: .5rem;
+  display: none;
+  height: 45px;
+}
+
+.js .spinner {
+  display: block;
+}
+
+.container:hover .spinner {
+  right: 0;
+  top: 1px;
+}
+
+.button {
+  position: relative;
+  color: lightgray;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  padding-left: 6px;
+  display: block;
+}
+
+.button:hover {
+  color: gray;
+}
+
+.button:active {
+  color: darkgray
+}
+
+.up {
+  transform: rotate(-90deg);
+  top: -.5rem;
+  left: -1px;
+}
+
+.down {
+  transform: rotate(-90deg);
+  top: -1.7rem;
+  left: -1px;
 }
